@@ -18,7 +18,17 @@
   ],
   "rules": {
     "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": "error"
+    "simple-import-sort/imports": "error",
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "ignoreCase": true, // Sorts props alphabetically, case-insensitively.
+        "callbacksLast": true, // Places event handlers like `onClick` after other props.
+        "shorthandFirst": true, // Places shorthand properties (like `tabIndex`) first.
+        "noSortAlphabetically": false, // If true, preserves manual order.
+        "reservedFirst": true // Places reserved props like `key` and `ref` first.
+      }
+    ]
   },
   "overrides": [
     {
